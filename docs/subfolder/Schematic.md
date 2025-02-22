@@ -6,4 +6,4 @@ tags:
 
 ## Below is the schematics for our HMI subsystem
 
- ![caption for image](./HMI_schematics.jpg)
+ ![caption for image](./HMI_Schematics.png)
