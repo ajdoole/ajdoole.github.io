@@ -1,4 +1,5 @@
 
+Table 1: OLED Screen
 | Component                | Image                                                                                                             | Voltage Range (V) | Max Current (mA) | Pros                                                                                         | Cons                                                                |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------|-------------------|------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | OLED Display Screen       | ![OLED Display](https://github.com/user-attachments/assets/cd7eb6ce-0679-4ae2-a178-05703a275109) [Link](https://www.digikey.com/en/products/detail/newhaven-display-intl/NHD-C12832A1Z-FSW-FBW-3V3/2059236) | 2.7 - 3.3         | 100              | <ul><li>Inexpensive</li><li>PSOC Compatible</li><li>Visually clear</li><li>Larger Screen</li> | <ul><li>Smaller voltage input</li><li>Limited display options</li> |
