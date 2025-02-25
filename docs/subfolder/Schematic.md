@@ -9,4 +9,4 @@ tags:
  ![caption for image][def]
 
 
-[def]: ./HMI_Schematics.png
+[def]: ./2025-02-25.png
