@@ -1,5 +1,5 @@
 ---
-title: Datasheet
+title: Block Diagram
 tags:
 - Human Machine Interface (HMI) Diagram
 ---
