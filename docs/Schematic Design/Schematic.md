@@ -11,4 +11,4 @@ tags:
 ## Power Budget
 Below is the power budget used to determine the necessary supply voltages for this particular subsystem.
 
-![Power Budget](./Power%20Budget.pdf)
+![Power Budget](./2025-02-26.png)
