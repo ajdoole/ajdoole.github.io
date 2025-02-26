@@ -6,7 +6,9 @@ tags:
 
 ## Below is the schematics for our HMI subsystem
 
- ![caption for image][def]
+![Schematic Image](./2025-02-25.png)
 
+## Power Budget
+Below is the power budget used to determine the necessary supply voltages for this particular subsystem.
 
-[def]: ./2025-02-25.png
+![Power Budget](./Power%20Budget.pdf)
