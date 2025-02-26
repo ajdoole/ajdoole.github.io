@@ -7,15 +7,14 @@ tags:
 
 ## Hello, my name is Alex Dooley
 
-*List Item 1
-*List Item 2
+*Welcome to the home page report for the Human Machine Interface Subsystem for Team 202.
 
 Name | Description
 -----|------------
 Alex | Robotics Engineering Major
 
-### What to expect this semester (temporary subheading)
+### Contents
 
-1. Step 1
-1. Step 2
-1. Step 3
+1. Block Diagram
+1. Component Selection
+1. Schematics and Power Budget
