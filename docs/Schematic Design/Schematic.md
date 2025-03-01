@@ -6,7 +6,7 @@ tags:
 
 ## Below is the schematics for our HMI subsystem
 
-![Schematic Image](./2025-02-25.png)
+![Schematic Image](./schematics3.png)
 
 ## Power Budget
 
