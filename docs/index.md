@@ -18,3 +18,4 @@ Alex | Robotics Engineering Major
 1. Block Diagram
 1. Component Selection
 1. Schematics and Power Budget
+1. Bill of Materials
