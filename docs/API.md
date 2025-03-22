@@ -4,7 +4,7 @@ title: API - Messaging
 Message Structure
 | Message Type <br /> byte 1-2 <br /> (char)            | Description |
 | --------------------------------------------- | ----------- |
-|1                                              | Set motor X in Y in direction |
+|1                                              | Print set motor X in Y in direction |
 |2                                              | Print sensor X value Y |
 |3                                              | Subsystem Wifi Error Message |
 |4                                              | Subsystem Wifi Status X |
