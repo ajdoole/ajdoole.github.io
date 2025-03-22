@@ -2,6 +2,7 @@
 title: API - Messaging
 ---
 Message Structure
+
 | Message Type <br /> byte 1-2 <br /> (char)            | Description |
 | --------------------------------------------- | ----------- |
 |1                                              | Set motor X in Y in direction |
@@ -14,6 +15,7 @@ Message Structure
 |8                                              | Broadcast |
 
 Message Type 1:
+
 |----------- | Byte 5-6 | Byte 7 | Byte 8 |
 |------------| --------------| ------------- | ------------- |
 | Variable Name | message_type | motor_id | motor_direction |
@@ -23,6 +25,7 @@ Message Type 1:
 | Example | 1 | 2 | -1 |
 
 Message Type 2:
+
 |----------- | Byte 5-6 | Byte 7 | Byte 8 |
 |------------| --------------| ------------- | ------------- |
 | Variable Name | message_type | sensor_id | sensor_value |
@@ -32,6 +35,7 @@ Message Type 2:
 | Example | 2 | 2 | 50 |
 
 Message Type 3:
+
 |----------- | Byte 5 - Byte 6 | Byte 7 - Byte 55 |
 |------------| --------------| ------------- |
 | Variable Name | message_type | error_message |
@@ -41,6 +45,7 @@ Message Type 3:
 | Example | 3 | Wifi is connecting |
 
 Message Type 4:
+
 |----------- | Byte 5 - Byte 6 | Byte 7 |
 |------------| --------------| ------------- |
 | Variable Name | message_type | wifi_status |
@@ -48,7 +53,9 @@ Message Type 4:
 | Min Value | 1 | 0 |
 | Max Value| 8 | 1 |
 | Example | 4 | 0 |
+
 Message Type 5:
+
 |----------- | Byte 5 - Byte 6 | Byte 7 |
 |------------| --------------| ------------- |
 | Variable Name | message_type | subsystem_id |
@@ -58,6 +65,7 @@ Message Type 5:
 | Example | 5 | c |
 
 Message Type 6:
+
 |----------- | Byte 5 - Byte 6 | Byte 7 |
 |------------| --------------| ------------- |
 | Variable Name | message_type | motor_status |
@@ -67,6 +75,7 @@ Message Type 6:
 | Example | 6 | 0 |
 
 Message Type 7:
+
 |----------- | Byte 5 - Byte 6 | Byte 7 |
 |------------| --------------| ------------- |
 | Variable Name | message_type | motor_status |
@@ -76,6 +85,7 @@ Message Type 7:
 | Example | 7 | 0 |
 
 Message Type 8:
+
 |----------- | Byte 5 - Byte 6 | Byte 7 - Byte 55 |
 |------------| --------------| ------------- |
 | Variable Name | message_type | broadcast_message |
