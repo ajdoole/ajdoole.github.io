@@ -12,13 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Schematic%20Design/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/API/">
       
       
-        <link rel="prev" href="../HMIblockdiagram/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="Schematic/">
+        <link rel="next" href="../Bill%20of%20Materials/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>This is the index to a subfolder - EGR314 Report Template</title>
+        <title>API - Messaging - EGR314 Report Template</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              This is the index to a subfolder
+              API - Messaging
             
           </span>
         </div>
@@ -212,9 +212,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../API/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -280,13 +282,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../Schematic%20Design/" class="md-tabs__link">
           
   
     
@@ -372,9 +372,16 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../API/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -383,6 +390,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -448,8 +456,6 @@
       
   
   
-    
-  
   
     
     
@@ -462,64 +468,28 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
+  
+  
+    <a href="../Schematic%20Design/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     Schematic Design
   </span>
   
 
-            </a>
-            
-              <label class="md-nav__link md-nav__link--active" for="__nav_6">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Schematic Design
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Schematic/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Human Machine Interface Schematics
-  </span>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -556,7 +526,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Schematic Design/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/API.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -564,9 +534,83 @@
   
 
 
-  <h1>This is the index to a subfolder</h1>
+  <h1>API - Messaging</h1>
 
-<p>Things to discuss</p>
+<p>Message Structure
+| Message Type <br /> byte 1-2 <br /> (char)            | Description |
+| --------------------------------------------- | ----------- |
+|1                                              | Set motor X in Y in direction |
+|2                                              | Print sensor X value Y |
+|3                                              | Subsystem Wifi Error Message |
+|4                                              | Subsystem Wifi Status X |
+|5                                              | Subsystem X is not communicating |
+|6                                              | Motor Status, X |
+|7                                              | Sensor Status, X |
+|8                                              | Broadcast |</p>
+<p>Message Type 1:
+|----------- | Byte 5-6 | Byte 7 | Byte 8 |
+|------------| --------------| ------------- | ------------- |
+| Variable Name | message_type | motor_id | motor_direction |
+|Variable Type | char | char | int8_t |
+| Min Value| 1 | 1 | -1 |
+| Max Value| 8 | 3 | 1 |
+| Example | 1 | 2 | -1 |</p>
+<p>Message Type 2:
+|----------- | Byte 5-6 | Byte 7 | Byte 8 |
+|------------| --------------| ------------- | ------------- |
+| Variable Name | message_type | sensor_id | sensor_value |
+|Variable Type | char | char | char |
+| Min Value| 1 | 1 | 0 |
+| Max Value| 8 | 2 | 100 |
+| Example | 2 | 2 | 50 |</p>
+<p>Message Type 3:
+|----------- | Byte 5 - Byte 6 | Byte 7 - Byte 55 |
+|------------| --------------| ------------- |
+| Variable Name | message_type | error_message |
+|Variable Type | char | char |
+| Min Value| 1 | Wifi not connecting |
+| Max Value| 8 | Wifi is connecting |
+| Example | 3 | Wifi is connecting |</p>
+<p>Message Type 4:
+|----------- | Byte 5 - Byte 6 | Byte 7 |
+|------------| --------------| ------------- |
+| Variable Name | message_type | wifi_status |
+|Variable Type | char | char |
+| Min Value | 1 | 0 |
+| Max Value| 8 | 1 |
+| Example | 4 | 0 |
+Message Type 5:
+|----------- | Byte 5 - Byte 6 | Byte 7 |
+|------------| --------------| ------------- |
+| Variable Name | message_type | subsystem_id |
+|Variable Type | char | char |
+| Min Value | 1 | a |
+| Max Value| 8 | d |
+| Example | 5 | c |</p>
+<p>Message Type 6:
+|----------- | Byte 5 - Byte 6 | Byte 7 |
+|------------| --------------| ------------- |
+| Variable Name | message_type | motor_status |
+|Variable Type | char | uint8_t |
+| Min Value | 1 | 0 |
+| Max Value| 8 | 1 |
+| Example | 6 | 0 |</p>
+<p>Message Type 7:
+|----------- | Byte 5 - Byte 6 | Byte 7 |
+|------------| --------------| ------------- |
+| Variable Name | message_type | motor_status |
+|Variable Type | char | uint8_t |
+| Min Value | 1 | 0 |
+| Max Value| 8 | 1 |
+| Example | 7 | 0 |</p>
+<p>Message Type 8:
+|----------- | Byte 5 - Byte 6 | Byte 7 - Byte 55 |
+|------------| --------------| ------------- |
+| Variable Name | message_type | broadcast_message |
+|Variable Type | char | char |
+| Min Value| 1 | Minimum value is 1 character |
+| Max Value| 8 | Max value is 48 characters |
+| Example | 8 | This is broadcast |</p>
 
 
 
@@ -594,7 +638,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../HMIblockdiagram/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Block Diagram" rel="prev">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -604,20 +648,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Block Diagram
+                Welcome
               </div>
             </div>
           </a>
         
         
           
-          <a href="Schematic/" class="md-footer__link md-footer__link--next" aria-label="Next: Human Machine Interface Schematics" rel="next">
+          <a href="../Bill%20of%20Materials/" class="md-footer__link md-footer__link--next" aria-label="Next: Bill of Materials" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Human Machine Interface Schematics
+                Bill of Materials
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://embedded-systems-design.github.io/template_report/API/</loc>
+         <lastmod>2025-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/template_report/Bill%20of%20Materials/</loc>
          <lastmod>2025-03-22</lastmod>
          <changefreq>daily</changefreq>
