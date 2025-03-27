@@ -7,7 +7,7 @@ Message Structure
 | --------------------------------------------- | ----------- |
 |1                                              | Set motor X in Y in direction |
 |2                                              | Print sensor X value Y |
-|3                                              | Subsystem Wifi Error Message |
+|3  *Not included in HMI                        | Subsystem Wifi Error Message |
 |4                                              | Subsystem Wifi Status X |
 |5                                              | Subsystem X is not communicating |
 |6                                              | Motor Status, X |
@@ -33,16 +33,6 @@ Message Type 2:
 | Min Value| 1 | 1 | 0 |
 | Max Value| 8 | 2 | 100 |
 | Example | 2 | 2 | 50 |
-
-Message Type 3:
-
-|----------- | Byte 5 - Byte 6 | Byte 7 - Byte 55 |
-|------------| --------------| ------------- |
-| Variable Name | message_type | error_message |
-|Variable Type | char | char |
-| Min Value| 1 | Wifi not connecting |
-| Max Value| 8 | Wifi is connecting |
-| Example | 3 | Wifi is connecting |
 
 Message Type 4:
 
