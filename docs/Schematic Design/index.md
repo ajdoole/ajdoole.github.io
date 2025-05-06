@@ -1,5 +1,2 @@
----
-title: This is the index to a subfolder
----
-
-Things to discuss
+## MPLabX Code
+Attached is a file of the HMI subsystem [code](HMI_Subsystem.zip).
