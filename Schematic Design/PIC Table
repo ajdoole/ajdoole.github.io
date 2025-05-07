@@ -1,3 +1,5 @@
+
+
 ## PIC18F47Q10 Chip Information
 
 | ESP Info                                | Answer                            |
@@ -27,3 +29,8 @@
 | I2C    | 2           | 0      | 15–26 & 33–40                     |
 | PWM    | 2           | 0      | 2–18                              |
 | ICSP   | 2           | 0      | 39 & 40                           |
+
+
+![pinlayout](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pinlayout.png)
+
+![pinlayout](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/allpins.png)
