@@ -590,6 +590,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pic18f47q10-chip-information" class="md-nav__link">
+    PIC18F47Q10 Chip Information
+  </a>
+  
+    <nav class="md-nav" aria-label="PIC18F47Q10 Chip Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-summary" class="md-nav__link">
+    Module Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -672,6 +692,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pic18f47q10-chip-information" class="md-nav__link">
+    PIC18F47Q10 Chip Information
+  </a>
+  
+    <nav class="md-nav" aria-label="PIC18F47Q10 Chip Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-summary" class="md-nav__link">
+    Module Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -713,6 +753,126 @@
 <p><a class="glightbox" href="https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pcbfinal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Printed Circuit Board" src="https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pcbfinal.png" /></a></p>
 <h2 id="version-20">Version 2.0</h2>
 <p>To further improve upon this particular design, I would look for ways to shrink the overall size of this board and use a larger OLED screen that would be connected via jumper wires, similarly to how the buttons were attached.  That way, there could be more complex, detailed displays on a larger screen without having to mount it directly onto the board.  Additionally, the orientation of my UART Ribbon cable pins were unaligned with the default arrangement my teammates utilized.  Although this was easily solved with jumper wires, it was not as professional or ideal.  I would also rely on a different microchip, preferably the ESP32 due to its simpler I2C communication messaging and default libraries for OLED applications.  However, the only detail that led this microcontroller to create issues was how there are two pairs of VSS and VDD (power and GND) pins, and one of those pairs were unaligned with my PCB footprint for this component, which resulted in a short in the circuit.  Fortunately, by simply removing those two pins from the copper pads on the board, the short was eliminated.  If I were to use this same type of chip again, of course, I would ensure my custom footprint file is completely accurate to the part's datasheet.</p>
+<h2 id="pic18f47q10-chip-information">PIC18F47Q10 Chip Information</h2>
+<table>
+<thead>
+<tr>
+<th>ESP Info</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>PIC18F47Q10</td>
+</tr>
+<tr>
+<td>Product Page URL</td>
+<td><a href="https://example.com">Product</a></td>
+</tr>
+<tr>
+<td>Datasheet URL(s)</td>
+<td><a href="[https://example.com](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27_47Q10-data-sheet-40002043C.pdf)">DataSheet</a></td>
+</tr>
+<tr>
+<td>Application Notes URL(s)</td>
+<td><a href="https://example.com">Notes</a></td>
+</tr>
+<tr>
+<td>Vendor link</td>
+<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47Q10-I-PT/10187786">Vendor</a></td>
+</tr>
+<tr>
+<td>Unit cost</td>
+<td>$3.32</td>
+</tr>
+<tr>
+<td>Absolute Maximum Current for entire IC</td>
+<td>350mA</td>
+</tr>
+<tr>
+<td>Supply Voltage Range</td>
+<td>1.8V–5.5V</td>
+</tr>
+<tr>
+<td>Maximum GPIO current (per pin)</td>
+<td>50mA</td>
+</tr>
+<tr>
+<td>Supports External Interrupts?</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Required Programming Hardware, Cost, URL</td>
+<td>[MPLAB-Snap]</td>
+</tr>
+<tr>
+<td>Works with MPLabX?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Works with Microchip Code Configurator?</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="module-summary">Module Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th># Available</th>
+<th>Needed</th>
+<th>Associated Pins (or * for any)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO</td>
+<td>30</td>
+<td>10</td>
+<td>19-25, 30, 32, 35, 36</td>
+</tr>
+<tr>
+<td>DAC</td>
+<td>1</td>
+<td>0</td>
+<td>*</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>2</td>
+<td>2</td>
+<td>1, 44</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>16</td>
+<td>0</td>
+<td>*</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>2</td>
+<td>2</td>
+<td>37, 42</td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>2</td>
+<td>0</td>
+<td>*</td>
+</tr>
+<tr>
+<td>ICSP</td>
+<td>2</td>
+<td>0</td>
+<td>39 &amp; 40</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pinlayout.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pinlayout" src="https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pinlayout.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/allpins.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pinlayout" src="https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/allpins.png" /></a></p>
 
 
 
