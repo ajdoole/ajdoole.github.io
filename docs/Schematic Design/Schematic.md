@@ -31,3 +31,40 @@ In conclusion, the power budget is essential. If one is a part of a team, the te
 
 ## Version 2.0
 To further improve upon this particular design, I would look for ways to shrink the overall size of this board and use a larger OLED screen that would be connected via jumper wires, similarly to how the buttons were attached.  That way, there could be more complex, detailed displays on a larger screen without having to mount it directly onto the board.  Additionally, the orientation of my UART Ribbon cable pins were unaligned with the default arrangement my teammates utilized.  Although this was easily solved with jumper wires, it was not as professional or ideal.  I would also rely on a different microchip, preferably the ESP32 due to its simpler I2C communication messaging and default libraries for OLED applications.  However, the only detail that led this microcontroller to create issues was how there are two pairs of VSS and VDD (power and GND) pins, and one of those pairs were unaligned with my PCB footprint for this component, which resulted in a short in the circuit.  Fortunately, by simply removing those two pins from the copper pads on the board, the short was eliminated.  If I were to use this same type of chip again, of course, I would ensure my custom footprint file is completely accurate to the part's datasheet.
+
+
+
+## PIC18F47Q10 Chip Information
+
+| ESP Info                                | Answer                            |
+|----------------------------------------|-----------------------------------|
+| Model                                   | PIC18F47Q10                       |
+| Product Page URL                        | [Product](https://example.com)    |
+| Datasheet URL(s)                        | [DataSheet]([https://example.com](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27_47Q10-data-sheet-40002043C.pdf))  |
+| Application Notes URL(s)                | [Notes](https://example.com)      |
+| Vendor link                             | [Vendor](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47Q10-I-PT/10187786)     |
+| Unit cost                               | $3.32                             |
+| Absolute Maximum Current for entire IC  | 350mA                             |
+| Supply Voltage Range                    | 1.8V–5.5V                         |
+| Maximum GPIO current (per pin)          | 50mA                              |
+| Supports External Interrupts?           | 3                                 |
+| Required Programming Hardware, Cost, URL| [MPLAB-Snap] |
+| Works with MPLabX?                      | Yes                               |
+| Works with Microchip Code Configurator? | Yes                               |
+
+### Module Summary
+
+| Module | # Available | Needed | Associated Pins (or * for any)    |
+|--------|-------------|--------|-----------------------------------|
+| GPIO   | 30          | 10     | 19-25, 30, 32, 35, 36             |
+| DAC    | 1           | 0      | *                                 |
+| UART   | 2           | 2      | 1, 44                             |
+| SPI    | 16          | 0      | *                                 |
+| I2C    | 2           | 2      | 37, 42                            |
+| PWM    | 2           | 0      | *                                 |
+| ICSP   | 2           | 0      | 39 & 40                           |
+
+
+![pinlayout](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pinlayout.png)
+
+![pinlayout](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/allpins.png)
