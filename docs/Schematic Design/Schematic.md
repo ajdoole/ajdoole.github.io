@@ -6,7 +6,14 @@ tags:
 
 ## Below is the schematics for our HMI subsystem
 
-![Schematic Image](./Screenshot 2025-04-18 151738.png)
+![Schematic Image](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/schematicslast.png)
+
+## Note
+This is actually the fifth board!  Attached is a folder containing the previous four failed designs that lead to this final success.
+![Prototypes](failedboards.zip)
+
+## PCB Assembly
+![PCB](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/finalboard.jpg)
 
 ## Power Budget
 
@@ -19,7 +26,7 @@ The power budget allows the team to coordinate their micro-controllers with each
 
 In conclusion, the power budget is essential. If one is a part of a team, the team can append the system easier knowing the power consumption of the device being added. Lastly, the budget gives me a quick reference of my power needs and constraints. By estimating my system's maximum power I can choose the most appropriate and capable components to support my system.
 
-## Assembled Board 
+## Assembled PCB Design 
 ![Printed Circuit Board](https://raw.githubusercontent.com/ajdoole/ajdoole.github.io/refs/heads/main/docs/pcbfinal.png)
 
 ## Version 2.0
